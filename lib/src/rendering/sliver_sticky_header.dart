@@ -14,9 +14,9 @@ class RenderSliverStickyHeader extends RenderSliver with RenderSliverHelpers {
   RenderSliverStickyHeader({
     RenderObject? header,
     RenderSliver? child,
-    bool overlapsContent: false,
-    bool reverse: false,
-    bool sticky: true,
+    bool overlapsContent = false,
+    bool reverse = false,
+    bool sticky = true,
     StickyHeaderController? controller,
   })  : _overlapsContent = overlapsContent,
         _sticky = sticky,
