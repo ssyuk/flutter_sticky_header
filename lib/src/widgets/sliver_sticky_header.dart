@@ -201,6 +201,9 @@ class SliverStickyHeader extends RenderObjectWidget {
   /// Defaults to true.
   final bool sticky;
 
+  /// Whether to use reverse mode for the sticky header.
+  /// This is useful for reverse scroll views (e.g., chat interfaces).
+  /// Defaults to false.
   final bool reverse;
 
   /// The controller used to interact with this sliver.
@@ -278,6 +281,9 @@ class SliverStickyHeaderBuilder extends StatelessWidget {
   /// Defaults to true.
   final bool sticky;
 
+  /// Whether to use reverse mode for the sticky header.
+  /// This is useful for reverse scroll views (e.g., chat interfaces).
+  /// Defaults to false.
   final bool reverse;
 
   /// The controller used to interact with this sliver.
