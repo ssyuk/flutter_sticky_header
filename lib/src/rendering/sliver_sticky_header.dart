@@ -345,12 +345,11 @@ class RenderSliverStickyHeader extends RenderSliver with RenderSliverHelpers {
               child!.geometry!.hitTestExtent > 0.0 &&
               child!.hitTest(result,
                   mainAxisPosition:
-                      mainAxisPosition,
+                      mainAxisPosition - childMainAxisPosition(child),
                   crossAxisPosition: crossAxisPosition));
     } else if (child != null && child!.geometry!.hitTestExtent > 0.0) {
-      print('testing child');
       return child!.hitTest(result,
-          mainAxisPosition: mainAxisPosition,
+          mainAxisPosition: mainAxisPosition - childMainAxisPosition(child),
           crossAxisPosition: crossAxisPosition);
     }
     return false;
