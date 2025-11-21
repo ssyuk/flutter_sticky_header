@@ -121,7 +121,7 @@ class SliverStickyHeaderState {
   final bool isPinned;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
     if (other is! SliverStickyHeaderState) return false;
     final SliverStickyHeaderState typedOther = other;
@@ -131,7 +131,7 @@ class SliverStickyHeaderState {
 
   @override
   int get hashCode {
-    return hashValues(scrollPercentage, isPinned);
+    return Object.hash(scrollPercentage, isPinned);
   }
 }
 
@@ -153,7 +153,7 @@ class SliverStickyHeader extends RenderObjectWidget {
     Key? key,
     this.header,
     this.sliver,
-    this.overlapsContent: false,
+    this.overlapsContent = false,
     this.sticky = true,
     this.reverse = false,
     this.controller,
@@ -170,7 +170,7 @@ class SliverStickyHeader extends RenderObjectWidget {
     Key? key,
     required SliverStickyHeaderWidgetBuilder builder,
     Widget? sliver,
-    bool overlapsContent: false,
+    bool overlapsContent = false,
     bool sticky = true,
     bool reverse = false,
     StickyHeaderController? controller,
@@ -255,7 +255,7 @@ class SliverStickyHeaderBuilder extends StatelessWidget {
     Key? key,
     required this.builder,
     this.sliver,
-    this.overlapsContent: false,
+    this.overlapsContent = false,
     this.sticky = true,
     this.reverse = false,
     this.controller,
